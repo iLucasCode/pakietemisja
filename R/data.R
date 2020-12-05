@@ -27,3 +27,4 @@
 #'  wskazniki
 #' }
 "wskazniki"
+

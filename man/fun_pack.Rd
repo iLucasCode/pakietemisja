@@ -16,23 +16,33 @@ fun_pack(
 )
 }
 \arguments{
-\item{dane}{- data frame, sklada sie z 50 wierszy o kolumnach: (Nat, segment, paliwo, technologia)
-- nat, to liczba losowo generowana
-- segment, character w tej kolumnie losowane sa wartosci sposrod 4 dostepnych
+\item{dane}{\itemize{
+\item data frame, sklada sie z 50 wierszy o kolumnach: (Nat, segment, paliwo, technologia)
+\item nat, to liczba losowo generowana
+\item segment, character w tej kolumnie losowane sa wartosci sposrod 4 dostepnych
 parametrów: "Mini", "Small", "Medium", "Large-SUV-Executive"
-- paliwo, okresla sie rodzaj paliwa
-- technologia, okresla rodzaj technologii oczyszczania spalin}
+\item paliwo, okresla sie rodzaj paliwa
+\item technologia, okresla rodzaj technologii oczyszczania spalin
+}}
 
-\item{kategoria}{- character okresla kategorie pojazdu}
+\item{kategoria}{\itemize{
+\item character okresla kategorie pojazdu
+}}
 
-\item{euro}{- Europejski standard emisji spalin}
+\item{euro}{\itemize{
+\item Europejski standard emisji spalin
+}}
 
-\item{mode}{- zawiera rodzaj drogi}
+\item{mode}{\itemize{
+\item zawiera rodzaj drogi
+}}
 
-\item{substancja}{- wektor character, przyjmuje substancje dla ktorych chcemy szacowac emisje
+\item{substancja}{\itemize{
+\item wektor character, przyjmuje substancje dla ktorych chcemy szacowac emisje
 aby zobaczyc liste dostepnych wartosci dla poszczegolnych parametrow nalezy uzyc
 funkcji unique dla danych "wskazniki"
-np. unique(wskazniki$Category)}
+np. unique(wskazniki$Category)
+}}
 }
 \value{
 data frame z obliczona emisja

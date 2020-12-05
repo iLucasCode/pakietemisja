@@ -1,0 +1,39 @@
+---
+title: "my-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(pakietemisja)
+```
+
+**Łukasz Klimczak**
+
+**e-mail:** *[klimczak1598@gmail.com](klimczak1598@gmail.com)*.
+
+***
+# Wprowadzenie
+***
+Dane, na których pracuje nasza funkcja pochodza ze strony Europejskiej Agencji Srodowiska (https://www.eea.europa.eu/themes/air/air-pollution-sources-1/emep-eea-air-pollutant-emission-inventory-guidebook}).
+
+***
+# Sposob instalacji
+***
+
+Pakiet mozna pobra z [github](https://github.com/), przez co konieczne jest zainstalowanie pakietu `devtools`, sluzacego do pobierania i instalacji znajdujacych sie na portalu repozytoriow. 
+
+```{r setup, eval=FALSE}
+install_git("https://github.com/iLucasCode/pakietemisja")
+library(emisjapakiet)
+```
