@@ -3,6 +3,7 @@
 export(emisja_plot)
 export(fun_pack)
 import(magrittr)
+import(tidyverse)
 importFrom(dplyr,filter)
 importFrom(dplyr,inner_join)
 importFrom(dplyr,mutate)
