@@ -8,7 +8,7 @@
 #'
 #' @export
 
-emisja_plot <- function(wynik=out)
+emisja_plot <- function(wynik)
 {
 
   ggplot(data = wynik, aes(x =Nat , y = Emisja)) +
