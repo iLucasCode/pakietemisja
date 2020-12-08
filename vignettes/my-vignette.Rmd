@@ -33,7 +33,7 @@ Dane, na których pracuje nasza funkcja pochodza ze strony Europejskiej Agencji 
 
 Pakiet mozna pobra z [github](https://github.com/), przez co konieczne jest zainstalowanie pakietu `devtools`, sluzacego do pobierania i instalacji znajdujacych sie na portalu repozytoriow. 
 
-```{r setup, eval=FALSE}
+```{r, eval=FALSE}
 install_git("https://github.com/iLucasCode/pakietemisja")
 library(emisjapakiet)
 ```
