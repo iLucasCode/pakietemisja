@@ -24,8 +24,7 @@
 #' }
 #' @examples
 #' \dontrun{
-#'  dane
+#'  wskazniki
 #' }
-"input"
 "wskazniki"
 
