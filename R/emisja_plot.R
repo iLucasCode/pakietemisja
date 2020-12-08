@@ -19,4 +19,3 @@ emisja_plot <- function(wynik)
   return(out)
 }
 
-emisja_plot(out)
