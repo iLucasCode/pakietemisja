@@ -4,7 +4,7 @@
 \alias{emisja_plot}
 \title{Funkcja wyswietla wykres na podstawie wyniku funkcji "fun_pack"}
 \usage{
-emisja_plot(wynik = out)
+emisja_plot(wynik)
 }
 \arguments{
 \item{wynik}{\itemize{

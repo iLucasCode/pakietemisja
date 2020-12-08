@@ -17,7 +17,7 @@
 #' np. unique(wskazniki$Category)
 #'
 #' @return data frame z obliczona emisja
-#'
+#' @import magrittr
 #'
 #' @export
 fun_pack <- function(dane = input,
