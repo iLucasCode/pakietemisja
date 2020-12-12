@@ -94,14 +94,14 @@ Funkcja nazwa funkcji 1 służy do wyznaczania emisji zanieczyszczeń wytwarzany
 Emisja=Nat * ((Alpha * Procent ^ 2 + Beta * Procent + Gamma + (Delta/Procent))(Epsilon * Procent ^ 2 + Zita * Procent + Hta) *(1-Reduction))
 
 
-Funkcje można uruchomić w taki sposób:
+Funkcje można uruchomić a nastepujacy sposób:
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 wynik<-fun_pack()
 ```
 
 Funkcja emisja_plot wyświetla wyniki funkcji fun_pack(). Rezultaty obliczeń są pokazane za pomocą wykresu rozrzutu natężenia do emisji.
 
-Funkcje można uruchomić w taki sposób:
+Funkcje można uruchomić a nastepujacy sposób:
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 emisja_plot(wynik)
 ```
