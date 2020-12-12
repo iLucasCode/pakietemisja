@@ -20,7 +20,7 @@ emisja_plot <- function(wynik)
   plotly(data=wynik, x =~Nat , y = ~Emisja+
   marker = list(size = 5,
                 color = Pollutant,
-                        width = 2)))
+                        width = 2))->out
   return(out)
 }
 
