@@ -17,7 +17,7 @@ emisja_plot <- function(wynik)
        wg. rodzaju zanieczyszenia") +
     labs(color = "Pollutant") -> out
 
-  #plotly(data=wynik, x =~Nat , y = ~Emisja+
+  #plotly(data=wynik, x =~Nat , y = ~Emisja,
   #marker = list(size = 5,
    #             color = Pollutant,
     #                    width = 2))->out
