@@ -49,14 +49,6 @@ fun_pack <- function(dane = input,
   if(length(substancja) != length(intersect(substancja,wskazniki$Pollutant)))
   {stop("Nieprawidlowa wartosc dla parametru substancja")}
 
-  if(!(("Nat" %in% colnames(dane)) &&
-       ("Segment" %in% colnames(dane)) &&
-       ("Fuel" %in% colnames(dane)) &&
-       ("Technology" %in% colnames(dane)))) {
-    stop("Brak kolumny")
-  } else if(ncol(dane) != 4) {
-    stop("Niewlasciwa liczba kolumn")
-  }
 
   if(!(is.data.frame(dane))) {stop("Niewlasciwy format danych wejsciowych")}
   if(any(is.null(dane))) {stop("Puste wartosci w danych wejsciowych")}
