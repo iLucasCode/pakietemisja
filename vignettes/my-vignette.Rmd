@@ -34,11 +34,6 @@ Pakiet został stworzonyw ramach z przedmiotu “Metody Inwentaryzacji i Szacowa
 # Sposob instalacji
 ***
 
-```{r include=FALSE}
-library(devtools)
-```
-
-
 Pakiet mozna pobra z [github](https://github.com/), przez co konieczne jest zainstalowanie pakietu `devtools`, sluzacego do pobierania i instalacji znajdujacych sie na portalu repozytoriow. 
 
 Instalacja:
