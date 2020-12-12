@@ -15,11 +15,14 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(devtools)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+
 ```
 
 **Łukasz Klimczak**
-Geoinformacja, 3 rok
+
+**Geoinformacja, 3 rok**
+
 **e-mail:** *[klimczak1598@gmail.com]*.
 
 ***
@@ -39,6 +42,7 @@ Pakiet mozna pobra z [github](https://github.com/), przez co konieczne jest zain
 Instalacja:
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
+library(devtools)
 install_github("iLucasCode/pakietemisja")
 ```
 
@@ -54,8 +58,9 @@ help(package="pakietemisja")
 ```
 
 ***
-#Dane wejściowe
+# Dane wejściowe
 ***
+
 Plik źródłowy z surowymi danymi został przetworzony i zapisany jako ramka danych wskaźniki. Obiekt ten pobiera się wraz z pakietem i służy on jako podstawowe dane do dalszej pracy. W ramce danych wskaźniki mamy zapisane dane do obliczenia emisji zanieczyszczeń z podziałem na różne kategorie pojazdów, rodzaj paliwa, technologię silnika, tryb jazdy, normę dopuszczalnej emisji spalin.
 Obiekt wskaźniki to dane wejściowe, które są argumentami funkcji obliczającej emisje zanieczyszczeń. Natomiast funkcja wyświetlająca wykres korzysta z utworzonych wyników obliczeń.
 
