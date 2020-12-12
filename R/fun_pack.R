@@ -53,15 +53,13 @@ fun_pack <- function(dane = input,
        ("Segment" %in% colnames(dane)) &&
        ("Fuel" %in% colnames(dane)) &&
        ("Technology" %in% colnames(dane)))) {
-    stop("Nieprawidlowe dane wejsciowe (brak kolumny)")
+    stop("Brak kolumny")
   } else if(ncol(dane) != 4) {
-    stop("Nieprawidlowe dane wejsciowe (liczba kolumn)")
-  } else if((nrow(dane)  < 1) || (nrow(dane)  > 1000)) {
-    stop("Nieprawidlowe dane wejsciowe (liczba wierszy min = 1, max = 1000)")
+    stop("Niewlasciwa liczba kolumn")
   }
 
   if(!(is.data.frame(dane))) {stop("Niewlasciwy format danych wejsciowych")}
-  if(any(is.null(dane))) {stop("Puste warto")}
+  if(any(is.null(dane))) {stop("Puste wartosci w danych wejsciowych")}
 
   input <- data.frame(Nat = rnorm(50, mean = 100, sd = 50),
                       Segment = sample(c("Mini", "Small", "Medium", "Large-SUV-Executive"),

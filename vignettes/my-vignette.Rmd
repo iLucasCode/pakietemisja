@@ -38,39 +38,58 @@ Pakiet mozna pobra z [github](https://github.com/), przez co konieczne jest zain
 Instalacja:
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
-library(devtools)
+if(!require(devtools)) {install.packages("devtools"); require(devtools)}
 install_github("iLucasCode/pakietemisja")
 ```
 
-Wczytanie
+Wczytywanie:
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 library(pakietemisja)
 ```
 
-Informacje o pakiecie
+Informacje o pakiecie:
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 help(package="pakietemisja")
+```
+
+Pakiety wymagane do pelnego dzialania pakietu
+```{r message=FALSE, warning=FALSE, echo=TRUE}
+library(dplyr)
+library(magrittr)
+library(qpdf)
+library(utils)
+library(rlang)
+library(stats)
+library(ggplot2)
 ```
 
 ***
 # Dane wejściowe
 ***
 
-Plik źródłowy z surowymi danymi został przetworzony i zapisany jako ramka danych wskaźniki. Obiekt ten pobiera się wraz z pakietem i służy on jako podstawowe dane do dalszej pracy. W ramce danych wskaźniki mamy zapisane dane do obliczenia emisji zanieczyszczeń z podziałem na różne kategorie pojazdów, rodzaj paliwa, technologię silnika, tryb jazdy, normę dopuszczalnej emisji spalin.
-Obiekt wskaźniki to dane wejściowe, które są argumentami funkcji obliczającej emisje zanieczyszczeń. Natomiast funkcja wyświetlająca wykres korzysta z utworzonych wyników obliczeń.
+Wraz z pakietem pobierane sa dane o nazwie 'wskazniki'. Dane zapisane sa w formacie 'data.frame' i moga posluzyc do obliczenia emisji zanieczyszczeń z podziałem na kategorie pojazdów, rodzaj uzywanego paliwa, rodzaj silnika, tryb jazdy, normę dopuszczalnej emisji spalin.
+
+Obiekt 'input' sluzy jako dane wejsciowe dla funkcji fun_pack().
 
 Dokumentacje do danych pakietu można wywołać w następujący sposób:
-?wskaźniki
+```{r, eval = FALSE}
+?input
+?wskazniki
+?eeval_wynik
+```
 
+***
+#Funkcje pakietu
+***
 
-
-Funkcje pakietu
 Funkcje pakietu posiadają dokumentację dostępną w systemie pomocy programu RStudio. W celu zapoznania się ze szczegółami zachęcam do jej przeglądnięcia po zainstalowania pakietu. Przykładowe wywołanie dokumentacji:
--fun_pack()
--emsija_plot()
+```{r, eval = FALSE}
+?fun_pack
+?emsija_plot
+```
 
-unkcja nazwa funkcji 1 służy do wyznaczania emisji zanieczyszczeń wytwarzanych przez pojazdy z silnikami spalinowymi. Emisje zanieczyszczeń zostały obliczone za pomocą następującego wzoru:
+Funkcja nazwa funkcji 1 służy do wyznaczania emisji zanieczyszczeń wytwarzanych przez pojazdy z silnikami spalinowymi. Emisje zanieczyszczeń zostały obliczone za pomocą następującego wzoru:
 
 Emisja=Nat * ((Alpha * Procent ^ 2 + Beta * Procent + Gamma + (Delta/Procent))(Epsilon * Procent ^ 2 + Zita * Procent + Hta) *(1-Reduction))
 
@@ -80,7 +99,7 @@ Funkcje można uruchomić w taki sposób:
 wynik<-fun_pack()
 ```
 
-Funkcja nazwa funkcji 2 wyświetla wyniki funkcji nazwa funkcji 1. Rezultaty obliczeń są pokazane za pomocą wykresu rozrzutu natężenia do emisji według rodzaju zanieczyszczenia.
+Funkcja emisja_plot wyświetla wyniki funkcji fun_pack(). Rezultaty obliczeń są pokazane za pomocą wykresu rozrzutu natężenia do emisji.
 
 Funkcje można uruchomić w taki sposób:
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
