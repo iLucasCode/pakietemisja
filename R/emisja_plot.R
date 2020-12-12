@@ -11,11 +11,16 @@
 emisja_plot <- function(wynik)
 {
 
-  ggplot(data = wynik, aes(x =Nat , y = Emisja)) +
-    geom_point(alpha = 0.7, aes(color = Pollutant)) +
-    labs(title = "Wykres rozrzutu Nateżenie do Emisji
-       wg. rodzaju zanieczyszenia") +
-    labs(color = "Pollutant") -> out
+  #ggplot(data = wynik, aes(x =Nat , y = Emisja)) +
+   # geom_point(alpha = 0.7, aes(color = Pollutant)) +
+  #  labs(title = "Wykres rozrzutu Nateżenie do Emisji
+    #   wg. rodzaju zanieczyszenia") +
+   # labs(color = "Pollutant") -> out
+
+  plotly(data=wynik, x =~Nat , y = ~Emisja+
+  marker = list(size = 5,
+                color = Pollutant,
+                        width = 2)))
   return(out)
 }
 
