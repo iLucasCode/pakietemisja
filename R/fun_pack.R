@@ -31,6 +31,38 @@ fun_pack <- function(dane = input,
 
   # Zabezpieczenia argumentów funkcji i danych wejscioweych.
 
+  if(!(is.character(kategoria)) ||
+     !(is.character(euro)) ||
+     !(is.character(mode)) ||
+     !(is.character(substancja)))
+  {stop("Parametr musi być typu character")}
+
+  if(length(kategoria) != length(intersect(kategoria,wskazniki$Category)))
+  {stop("Nieprawidlowa wartosc dla parametru kategoria")}
+
+  if(length(euro) != length(intersect(euro,wskazniki$Euro.Standard)))
+  {stop("Nieprawidlowa wartosc dla parametru euro")}
+
+  if(length(mode) != length(intersect(mode,wskazniki$Mode)))
+  {stop("Nieprawidlowa wartosc dla parametru mode")}
+
+  if(length(substancja) != length(intersect(substancja,wskazniki$Pollutant)))
+  {stop("Nieprawidlowa wartosc dla parametru substancja")}
+
+  if(!(("Nat" %in% colnames(dane)) &&
+       ("Segment" %in% colnames(dane)) &&
+       ("Fuel" %in% colnames(dane)) &&
+       ("Technology" %in% colnames(dane)))) {
+    stop("Nieprawidlowe dane wejsciowe (brak kolumny)")
+  } else if(ncol(dane) != 4) {
+    stop("Nieprawidlowe dane wejsciowe (liczba kolumn)")
+  } else if((nrow(dane)  < 1) || (nrow(dane)  > 1000)) {
+    stop("Nieprawidlowe dane wejsciowe (liczba wierszy min = 1, max = 1000)")
+  }
+
+  if(!(is.data.frame(dane))) {stop("Niewlasciwy format danych wejsciowych")}
+  if(any(is.null(dane))) {stop("Puste warto")}
+
   input <- data.frame(Nat = rnorm(50, mean = 100, sd = 50),
                       Segment = sample(c("Mini", "Small", "Medium", "Large-SUV-Executive"),
                                        size = 50, replace = T),
@@ -46,6 +78,8 @@ fun_pack <- function(dane = input,
     filter(Technology %in% technologia) %>%
     filter(Pollutant %in% substancja) %>%
     filter(Mode %in% mode)
+
+
 
   out <- inner_join(x = out, y = input, by = "Segment")
 

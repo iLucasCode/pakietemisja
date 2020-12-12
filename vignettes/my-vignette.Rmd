@@ -7,17 +7,13 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
+```{r eval=FALSE, include=FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 ```
 
-```{r setup}
-knitr::opts_chunk$set(warning = FALSE, message = FALSE)
-
-```
 
 **Łukasz Klimczak**
 
