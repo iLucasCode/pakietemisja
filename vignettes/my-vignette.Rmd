@@ -38,18 +38,18 @@ Pakiet mozna pobra z [github](https://github.com/), przez co konieczne jest zain
 
 Instalacja:
 
-```{r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE}
 install_github("iLucasCode/pakietemisja")
 ```
 
 Wczytanie
 
-```{r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE}
 library(pakietemisja)
 ```
 
 Informacje o pakiecie
-```{r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE}
 help(package="pakietemisja")
 ```
 
@@ -75,13 +75,13 @@ Emisja=Nat * ((Alpha * Procent ^ 2 + Beta * Procent + Gamma + (Delta/Procent))(E
 
 
 Funkcje można uruchomić w taki sposób:
-```{r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE}
 wynik<-fun_pack()
 ```
 
 Funkcja nazwa funkcji 2 wyświetla wyniki funkcji nazwa funkcji 1. Rezultaty obliczeń są pokazane za pomocą wykresu rozrzutu natężenia do emisji według rodzaju zanieczyszczenia.
 
 Funkcje można uruchomić w taki sposób:
-```{r echo=TRUE}
+```{r echo=TRUE, message=FALSE, warning=FALSE}
 emisja_plot(wynik)
 ```
