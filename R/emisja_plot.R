@@ -14,7 +14,7 @@ emisja_plot <- function(wynik)
   ggplot(data = wynik, aes(x=Segment ,y = Emisja)) +
     geom_boxplot(alpha = 0.7, aes(color = Pollutant)) +
       labs(title = "Wykres Emisji dla poszczególnych
-      rodzajow nadwozia") +
+      rodzajow nadwozia" ) +
     labs(color = "Pollutant") -> out
 
 
