@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 
 Aby zainstalowac pakiet nalezy najpierw pobrac repozytorium z githuba. Do wykonania tego konieczny jest pakiet devtools.
   
-```{r eval=FALSE}
+```{r include=FALSE}
 if (!require(devtools)) {install.packages("devtools"); require(devtools)}
 
 install_github("iLucasCode/pakietemisja", force = T)
@@ -33,13 +33,13 @@ library(pakietemisja)
 
 Do pakietu zalaczone sa dane domyslne wskazniki i input.Mozna uzyc ich aby zobaczyc w jakis sposob dziala pakiet. Dane uzywane sa automatycznie jezeli uzytkownik nie uzyje innych danych
   
-```{r eval=FALSE}
+```{r echo=TRUE}
 wynik<-fun_pack()
 ```
 
 Pakiet umozliwia wyswietlenie obliczonych wynikow za pomoca wbudowanej funkcji bazujacej na pakiecie ggplot2. 
   
-```{r eval=FALSE}
+```{r echo=TRUE}
 emisja_plot(wynik)
 ```
 

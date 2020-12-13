@@ -40,7 +40,7 @@ Instalacja:
 library(devtools)
 ```
 
-```{r eval=FALSE, warning=FALSE, message=FALSE}
+```{r eval=FALSE, message=FALSE, warning=FALSE}
 if(!require(devtools)) {install.packages("devtools"); require(devtools)}
 install_github("iLucasCode/pakietemisja", force=TRUE)
 ```
@@ -75,10 +75,9 @@ Wraz z pakietem pobierane sa dane o nazwie 'wskazniki'. Dane zapisane sa w forma
 Obiekt 'input' sluzy jako dane wejsciowe dla funkcji fun_pack().
 
 Dokumentacje do danych pakietu można wywołać w następujący sposób:
-```{r, eval = FALSE}
+```{r echo=TRUE}
 ?input
 ?wskazniki
-?eeval_wynik
 ```
 
 ***
@@ -86,9 +85,9 @@ Dokumentacje do danych pakietu można wywołać w następujący sposób:
 ***
 
 Funkcje pakietu posiadają dokumentację dostępną w systemie pomocy programu RStudio. W celu zapoznania się ze szczegółami zachęcam do jej przeglądnięcia po zainstalowania pakietu. Przykładowe wywołanie dokumentacji:
-```{r, eval = FALSE}
+```{r eval=FALSE, message=FALSE, warning=FALSE}
 ?fun_pack
-?emsija_plot
+?emisja_plot
 ```
 
 Funkcja nazwa funkcji 1 służy do wyznaczania emisji zanieczyszczeń wytwarzanych przez pojazdy z silnikami spalinowymi. Emisje zanieczyszczeń zostały obliczone za pomocą następującego wzoru:

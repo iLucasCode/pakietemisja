@@ -13,13 +13,6 @@ jest obiekt input.
 Aby zainstalowac pakiet nalezy najpierw pobrac repozytorium z githuba.
 Do wykonania tego konieczny jest pakiet devtools.
 
-``` r
-if (!require(devtools)) {install.packages("devtools"); require(devtools)}
-
-install_github("iLucasCode/pakietemisja", force = T)
-library(pakietemisja)
-```
-
 ## Przyklad uzycia
 
 Do pakietu zalaczone sa dane domyslne wskazniki i input.Mozna uzyc ich
@@ -36,3 +29,5 @@ funkcji bazujacej na pakiecie ggplot2.
 ``` r
 emisja_plot(wynik)
 ```
+
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
