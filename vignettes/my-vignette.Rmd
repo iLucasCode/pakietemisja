@@ -40,9 +40,9 @@ Instalacja:
 library(devtools)
 ```
 
-```{r , message=FALSE, warning=FALSE,eval=FALSE}
+```{r eval=FALSE, warning=FALSE, message=FALSE}
 if(!require(devtools)) {install.packages("devtools"); require(devtools)}
-install_github("iLucasCode/pakietemisja")
+install_github("iLucasCode/pakietemisja", force=TRUE)
 ```
 
 Wczytywanie:
@@ -105,6 +105,6 @@ wynik<-fun_pack()
 Funkcja emisja_plot wyświetla wyniki funkcji fun_pack(). Rezultaty obliczeń są pokazane za pomocą wykresu rozrzutu natężenia do emisji.
 
 Funkcje można uruchomić a nastepujacy sposób:
-```{r  message=FALSE, warning=FALSE, eval=FALSE}
+```{r echo=TRUE, message=FALSE, warning=FALSE}
 emisja_plot(wynik)
 ```
