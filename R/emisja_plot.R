@@ -11,10 +11,10 @@
 emisja_plot <- function(wynik)
 {
 
-  ggplot(data = wynik, aes(x =Nat , y = Emisja)) +
-    geom_point(alpha = 0.7, aes(color = Pollutant)) +
-      labs(title = "Wykres rozrzutu Nateżenie do Emisji
-       wg. rodzaju zanieczyszenia") +
+  ggplot(data = wynik, aes(x=Segment ,y = Emisja)) +
+    geom_boxplot(alpha = 0.7, aes(color = Pollutant)) +
+      labs(title = "Wykres Emisji dla poszczególnych
+      rodzajow nadwozia") +
     labs(color = "Pollutant") -> out
 
 
