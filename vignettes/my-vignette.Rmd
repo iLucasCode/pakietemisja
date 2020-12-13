@@ -36,7 +36,7 @@ Pakiet został stworzonyw ramach z przedmiotu “Metody Inwentaryzacji i Szacowa
 Pakiet mozna pobra z [github](https://github.com/), przez co konieczne jest zainstalowanie pakietu `devtools`, sluzacego do pobierania i instalacji znajdujacych sie na portalu repozytoriow. 
 
 Instalacja:
-```{r message=FALSE, warning=FALSE, eval=FALSE}
+```{r message=FALSE, warning=FALSE, include=FALSE}
 library(devtools)
 ```
 
@@ -47,24 +47,23 @@ install_github("iLucasCode/pakietemisja", force=TRUE)
 
 Wczytywanie:
 
-```{r echo=TRUE, message=FALSE, warning=FALSE, eval=FALSE}
+```{r echo=TRUE, message=FALSE, warning=FALSE}
 library(pakietemisja)
 ```
 
 Informacje o pakiecie:
-```{r echo=TRUE, message=FALSE, warning=FALSE, eval=FALSE}
+```{r echo=TRUE, message=FALSE, warning=FALSE}
 help(package="pakietemisja")
 ```
 
 Pakiety wymagane do pelnego dzialania pakietu
-```{r message=FALSE, warning=FALSE, echo=TRUE, eval=FALSE}
+```{r message=FALSE, warning=FALSE, echo=TRUE}
 library(dplyr)
 library(magrittr)
 library(utils)
 library(rlang)
 library(stats)
 library(ggplot2)
-library(qpdf)
 ```
 
 ***
@@ -98,7 +97,7 @@ Emisja=Nat * ((Alpha * Procent ^ 2 + Beta * Procent + Gamma + (Delta/Procent))(E
 
 
 Funkcje można uruchomić a nastepujacy sposób:
-```{r echo=TRUE, message=FALSE, warning=FALSE, eval=FALSE}
+```{r , echo=TRUE, message=FALSE, warning=FALSE}
 wynik<-fun_pack()
 ```
 
