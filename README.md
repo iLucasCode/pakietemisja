@@ -1,53 +1,38 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+Pakiet zostal stworzony w języku R, w ramach przedmiotu Metody
+Inwentaryzacji i Szacowanie Emisji. Służy do wyznaczania emisji
+zanieczyszczeń generowanych przez pojazdy z silnikami spalinowymi. Za
+pomocą zaimplementowanej funkcji pakietu wyniki obliczeń można
+zaprezentować na wykresie. Funkcje pakietu domyślnie korzystają z danych
+dołączonych do pakietu. Plik z danymi źródłowymi zostal przetworzony i
+zapisany do obiektu wskazniki. Dodatkowo do działania pakietu używany
+jest obiekt input.
 
-# pakietemisja
+## Instalacja
 
-<!-- badges: start -->
-
-<!-- badges: end -->
-
-The goal of pakietemisja is to …
-
-## Installation
-
-You can install the released version of pakietemisja from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("pakietemisja")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+Aby zainstalowac pakiet nalezy najpierw pobrac repozytorium z githuba.
+Do wykonania tego konieczny jest pakiet devtools.
 
 ``` r
-install.packages("devtools")
-devtools::install_github("iLucasCode/pakietemisja")
-```
+if (!require(devtools)) {install.packages("devtools"); require(devtools)}
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
+install_github("iLucasCode/pakietemisja", force = T)
 library(pakietemisja)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+## Przyklad uzycia
+
+Do pakietu zalaczone sa dane domyslne wskazniki i input.Mozna uzyc ich
+aby zobaczyc w jakis sposob dziala pakiet. Dane uzywane sa automatycznie
+jezeli uzytkownik nie uzyje innych danych
 
 ``` r
-summary(cars)
+wynik<-fun_pack()
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
-
-You can also embed plots, for example:
+Pakiet umozliwia wyswietlenie obliczonych wynikow za pomoca wbudowanej
+funkcji bazujacej na pakiecie ggplot2.
 
 ``` r
-plot(pressure)
+emisja_plot(wynik)
 ```
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
