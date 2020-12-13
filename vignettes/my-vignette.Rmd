@@ -86,11 +86,11 @@ Dokumentacje do danych pakietu można wywołać w następujący sposób:
 
 Funkcje pakietu posiadają dokumentację dostępną w systemie pomocy programu RStudio. W celu zapoznania się ze szczegółami zachęcam do jej przeglądnięcia po zainstalowania pakietu. Przykładowe wywołanie dokumentacji:
 ```{r eval=FALSE, message=FALSE, warning=FALSE}
-?fun_pack
-?emisja_plot
+?fun_pack()
+?emisja_plot()
 ```
 
-Funkcja nazwa funkcji 1 służy do wyznaczania emisji zanieczyszczeń wytwarzanych przez pojazdy z silnikami spalinowymi. Emisje zanieczyszczeń zostały obliczone za pomocą następującego wzoru:
+Funkcja fun_pack() służy do wyznaczania emisji zanieczyszczeń wytwarzanych przez pojazdy z silnikami spalinowymi. Emisje zanieczyszczeń zostały obliczone za pomocą następującego wzoru:
 
 Emisja=Nat * ((Alpha * Procent ^ 2 + Beta * Procent + Gamma + (Delta/Procent))(Epsilon * Procent ^ 2 + Zita * Procent + Hta) *(1-Reduction))
 
@@ -100,7 +100,7 @@ Funkcje można uruchomić a nastepujacy sposób:
 wynik<-fun_pack()
 ```
 
-Funkcja emisja_plot wyświetla wyniki funkcji fun_pack(). Rezultaty obliczeń są pokazane za pomocą wykresu rozrzutu natężenia do emisji.
+Funkcja emisja_plot() wyświetla wyniki funkcji fun_pack(). Rezultaty obliczeń są pokazane za pomocą wykresu rozrzutu natężenia do emisji.
 
 Funkcje można uruchomić a nastepujacy sposób:
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
